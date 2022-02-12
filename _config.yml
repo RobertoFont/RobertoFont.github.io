@@ -1,0 +1,39 @@
+title: Roberto J. Font Ruiz personal blog
+description: > # this means to ignore newlines
+  Roberto J. Font Ruiz personal blog. Applied scientist with a focus on data science and machine learning
+  This is were I have some silly fun with Artificial Intelligence, hopefully learning a few things along the way.
+permalink: ':title/'
+baseurl: "" # the subpath of your site, e.g. /blog
+url:"https://robertofont.github.io"
+site-twitter: #if your site has a twitter account, enter it here
+open_new_tab: true   
+
+# Author Settings
+author: Roberto J. Font Ruiz # add your name
+author-img: roberto-font.jpg # add your photo
+about-author: |
+  I'm an applied scientist with a focus on data science and machine learning. I have led the development of several Artificial Intelligence solutions, from pure research to production.
+  <br><br>This blog is were I have some silly fun with Artificial Intelligence, hopefully learning a few things along the way.
+#social-twitter: # add your Twitter handle
+#social-facebook: # add your Facebook handle
+social-github: RobertoFont # add your Github handle
+social-linkedin: roberto-font # add your Linkedin handle
+social-email: robertojavier.font@gmail.com
+
+# Disqus
+discus-identifier: # add your discus identifier
+
+# Tracker
+analytics: # Google Analytics
+
+# Build Settings
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+
+paginate: 8
+paginate_path: "/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
