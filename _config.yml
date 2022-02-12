@@ -4,7 +4,7 @@ description: > # this means to ignore newlines
   This is were I have some silly fun with Artificial Intelligence, hopefully learning a few things along the way.
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
-url:"https://robertofont.github.io"
+url: "https://robertofont.github.io"
 site-twitter: #if your site has a twitter account, enter it here
 open_new_tab: true   
 
