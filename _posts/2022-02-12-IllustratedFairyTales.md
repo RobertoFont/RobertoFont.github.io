@@ -2,7 +2,7 @@
 layout: post
 title: These tales were written and illustrated by a 5-year old and an AI
 date: 2022-02-12
-description: We use text generation and text to image models to create illustrated fairy tales.
+description: We use text generation and text-to-image models to create illustrated fairy tales.
 img: rose.png
 fig-caption: 
 tags: [GPT-3, DALL-E, Text generation, Text-to-image]
@@ -16,11 +16,11 @@ We started by writing the tales using the following procedure:
 
 - The Language Model (Open AI [GPT-3](https://github.com/openai/gpt-3)) provided 5 alternative continuations.
 
-- My son choosed which of them to use. (This point was tricky because he tended to pick let's say *unexpected* options).
+- My son chose which of them to use. (This point was tricky because he tended to pick let's say *unexpected* options).
 
 - I could choose whether we would use the complete continuation or take just a subset of it.
 
-- Sometimes, we would manually add some small text, but we tried to do that as little as possible and we both had to agree on what to insert (tricky again...). We mainly used this possibility to prevent the LM to prematurely finish the tale and, in the case of the first tale, to provide a proper ending. (More detail on these points in the Conclusions section).
+- Sometimes, we would manually add some small text, but we tried to do that as little as possible and we both had to agree on what to insert (tricky again...). We mainly used this possibility to prevent the LM from prematurely finishing the tale and, in the case of the first tale, to provide a proper ending. (More detail on these points in the Conclusions section).
 
 Once the tale was finished, we agreed on some things that would be nice to portray and wrote text descriptions to prompt the DALL-E model.
 
@@ -107,15 +107,15 @@ The wizard cast a spell and turned the dragon into a stone statue. The villagers
 
 # 2. Conclusions and boring details
 
-**Text generation** was performed using a large pretrained language model, in particular [GPT-3](https://github.com/openai/gpt-3) Davinci through the [OpenAI API](https://openai.com/blog/openai-api/). We have already talked about large pretrained language models in this blog, so I won't elaborate too much. You can take a look to previous posts or [this survey](https://arxiv.org/abs/2111.01243) if you want to delve deeper. I can, however, share some insights:
+**Text generation** was performed using a large pretrained language model, in particular [GPT-3](https://github.com/openai/gpt-3) Davinci through the [OpenAI API](https://openai.com/blog/openai-api/). We have already talked about large pretrained language models in this blog, so I won't elaborate too much. You can take a look at previous posts or [this survey](https://arxiv.org/abs/2111.01243) if you want to delve deeper. I can, however, share some insights:
 
-The tales were written with the new [instruct models](https://openai.com/blog/instruction-following/) (they are now the default models when using the API). I have not performed any extensive comparison, but these models seem to indeed consistently yield better results than their original counterparts.
+The tales were written with the new [instruct models](https://openai.com/blog/instruction-following/) (they are now the default models when using the API). I have not performed an extensive comparison, but these models seem to indeed consistently yield better results than their original counterparts.
 
-The total context of the Davinci model is 2048 tokens, which means that, after a few sentences, it will tend to end the tale and, once all the context is used, it won't be able to generate more text. This makes tricky to have an introduction, climax and denouement.
+The total context of the Davinci model is 2048 tokens, which means that, after a few sentences, it will tend to end the tale and, once all the context is used, it won't be able to generate more text. This makes it tricky to have an introduction, climax, and denouement.
 
 In *The dragon of the falls*, our first attempt, you can see that the model provided an ending after the second paragraph. We made it continue by prompting again, but it just provided a new ending after a few sentences.
 
-For *The secret garden*, what we did was to provide the model a fixed-length context of 250 characters. This way, as we generate new text, we remove the older parts, creating room for new text to be generated. It is not ideal, since the model will *forget* what happened outside this context, but it seemed to work much better. I plan on continuing to tweak this approach to see how  closer can we get to having a real plot.
+For *The secret garden*, what we did was to provide the model with a fixed-length context of 250 characters. This way, as we generate new text, we remove the older parts, creating room for new text to be generated. It is not ideal, since the model will *forget* what happened outside this context, but it seemed to work much better. I plan on continuing to tweak this approach to see how  closer can we get to having a real plot.
 
 <figure>
     <img src="../assets/img/2022-02-12-IllustratedFairyTales/black-rose.png"
@@ -125,4 +125,4 @@ For *The secret garden*, what we did was to provide the model a fixed-length con
 
 **Image generation** was performed using [ru-dalle](https://github.com/sberbank-ai/ru-dalle), a Russian, open source version of Open AI [DALL-E](https://openai.com/blog/dall-e/). DALL-E (and his Russian cousin) is a model that can convert a text query into an automatically-generated image. Just like that. Magic. From a more technical standpoint, it is, much like GPT-3, a transformer-based autoregressive model. It jointly models the text description and the image as a single stream of tokens and is trained to generate all of the tokens one after the other. That's why, given the text description, it can generate the image. The text is represented by, at most, 256 byte pair-encoded tokens, and the image by 1024 tokens created by compressing a 256x256 image to a 32x32 grid of tokens using a discrete variational autoencoder. A more detailed (and better) explanation can be found in the [paper](https://arxiv.org/abs/2102.12092).
 
-DALL-E has not been publicly released. However, judging from the images in the [post](https://openai.com/blog/dall-e/), I would say that the quality of the images generated by [ru-dalle](https://github.com/sberbank-ai/ru-dalle) is much lower. That being said, writing a short text and having an image appear in front of you feels like magic, and it is extremely easy to do thanks to the [Colab notebook](https://github.com/sberbank-ai/ru-dalle/blob/master/jupyters/Malevich-3.5GB-vRAM-usage.ipynb) provided by the authors. The only bad thing is that the text input must be in Russian and, considering the current situation with Russia and that I have spent the last few days using Google to translate cryptic sentences like *the dragon is under the waterfall* into Russian, at this point I'm most definitely being tracked by the NSA.
+DALL-E has not been publicly released. However, judging from the images in the [post](https://openai.com/blog/dall-e/), I would say that the quality of the images generated by [ru-dalle](https://github.com/sberbank-ai/ru-dalle) is much lower. That being said, writing a short text and having an image appear in front of you feels like magic, and it is extremely easy to do thanks to the [Colab notebook](https://github.com/sberbank-ai/ru-dalle/blob/master/jupyters/Malevich-3.5GB-vRAM-usage.ipynb) provided by the authors.
