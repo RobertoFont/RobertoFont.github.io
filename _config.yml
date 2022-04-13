@@ -1,7 +1,7 @@
 title: Roberto J. Font Ruiz personal blog
 description: > # this means to ignore newlines
   Roberto J. Font Ruiz personal blog. Applied scientist with a focus on data science and machine learning
-  This is were I have some silly fun with Artificial Intelligence, hopefully learning a few things along the way.
+  This is where I have some silly fun with Artificial Intelligence, hopefully learning a few things along the way.
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://robertofont.github.io"
