@@ -22,7 +22,7 @@ Here is the final result.
 
 # The city at night
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CT6JRAEkLlA" title="The City at Night" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id='CT6JRAEkLlA' %}
 
 # Speech synthesis
 

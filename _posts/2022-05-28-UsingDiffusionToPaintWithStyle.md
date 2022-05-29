@@ -144,31 +144,22 @@ I think it is a cool feature, but the result is very hard to control.
 
 Here is an example:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zeh1E0NaWmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id='zeh1E0NaWmw' %}
 
 and these are the parameters that were used:
 
-angle: 0:(0)
-
-zoom: 0: (1), 10: (1.05), 180: (1)
-
-translation_x: 0: (0)
-
-translation_y: 0: (0), 180: (5.0)
-
-translation_z: 0: (10.0), 180: (0)
-
-rotation_3d_x: 0: (0)
-
-rotation_3d_y: 0: (0)
-
-rotation_3d_z: 0: (0)
-
-text_prompts = { 0: ["A beautiful painting of a miniature rainforest contained inside a crystal ball resting in the sand of a desert."], 100: ["A beautiful painting of a magnificent oasis in the desert."],
-
-200: ["A beautiful painting of a rainbow passing through a giant ruby floating in the sky above a desert."]
-
-}
+    angle: 0:(0)
+    zoom: 0: (1), 10: (1.05), 180: (1)
+    translation_x: 0: (0)
+    translation_y: 0: (0), 180: (5.0)
+    translation_z: 0: (10.0), 180: (0)
+    rotation_3d_x: 0: (0)
+    rotation_3d_y: 0: (0)
+    rotation_3d_z: 0: (0)
+    
+    text_prompts = { 0: ["A beautiful painting of a miniature rainforest contained inside a crystal ball resting in the sand of a desert."],
+    100: ["A beautiful painting of a magnificent oasis in the desert."],
+    200: ["A beautiful painting of a rainbow passing through a giant ruby floating in the sky above a desert."]}
 
 # Limitations
 
