@@ -14,7 +14,7 @@ author-img: roberto-font.jpg # add your photo
 about-author: |
   I'm an applied scientist with a focus on data science and machine learning. I have led the development of several Artificial Intelligence solutions, from pure research to production.
   <br><br>This blog is where I have some silly fun with Artificial Intelligence, hopefully learning a few things along the way.
-#social-twitter: # add your Twitter handle
+social-twitter: RobertoJFont # add your Twitter handle
 #social-facebook: # add your Facebook handle
 social-github: RobertoFont # add your Github handle
 social-linkedin: roberto-font # add your Linkedin handle
