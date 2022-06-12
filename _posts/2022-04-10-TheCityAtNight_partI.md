@@ -18,7 +18,7 @@ Today we will cover the first two points: we will work together with the GPT-3 l
 
 In the second part, we will synthesize voice to transform the tale into an audiobook, synthesize some background music, and create a video with the illustrations, narration, and music.
 
-But that will be in the next post. For now, let's focus on writing and illustrating our Gothic horror tale. First, let's take a look at the result. Then, we can talk a bit about the process and the tools used.
+But that will be in the [next post](https://robertofont.github.io/TheCityAtNight_partII/). For now, let's focus on writing and illustrating our Gothic horror tale. First, let's take a look at the result. Then, we can talk a bit about the process and the tools used.
 
 # The city at night
 
