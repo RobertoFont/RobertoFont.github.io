@@ -62,7 +62,7 @@ La verdad que quedamos bastante contentos. Midjourney fue capaz (con algo de ens
 
 El siguiente paso montarlo en forma de cómic, y que el hermano mayor escribiera los bocadillos:
 
-[![Todas las ilustraciones montadas en forma de cómic]({{site.baseurl}}/assets/img/Composicion_comic.png)]({{site.baseurl}}/assets/img/Composicion_comic.png)
+[![Todas las ilustraciones montadas en forma de cómic]({{site.baseurl}}/assets/img/2023-06-04-Deberes4AñosIAAlRescate/Composicion_comic.png)]({{site.baseurl}}/assets/img/2023-06-04-Deberes4AñosIAAlRescate/Composicion_comic.png)
 
 Por último, un poco de tijeras y pegamento para darle la forma final. Su madre fue la que se encargó de pensar cómo presentarlo todo.
 
