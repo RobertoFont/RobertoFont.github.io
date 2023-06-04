@@ -3,7 +3,7 @@ layout: post
 title: ¿Tu hijo de 4 años tiene deberes? ¡IA al rescate!
 date: 2023-06-04
 description: Empleamos IA generativa para realizar una 'obra de arte en familia' para la clase de mi hijo pequeño
-img: composicion_comic.png
+img: Composicion_comic.png
 fig-caption:
 tags: [Spanish, Midjourney, Text-to-image, Art generation, Image generation]
 ---
